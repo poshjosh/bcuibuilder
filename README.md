@@ -41,17 +41,9 @@
         final JScrollPane scrolls = new JScrollPane(ui);
 
         JOptionPane.showMessageDialog(null, scrolls, "Please Edit Me", JOptionPane.PLAIN_MESSAGE);
+
+        // At this point the user edits form values. Then we need to extract the updated values
         
-//        ![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/src/test/resources/META-INF/form_built_from_map_entries.png)        
-
-        final int count = ui.getComponentCount();
-        for(int i=0; i<count; i++) {
-            final Component c = ui.getComponent(i);
-            if(c instanceof JTextComponent) {
-//                System.out.println(c.getName() + '=' + ((JTextComponent)c).getText());
-            }
-        }
-
         // Create a FromUIBuilder instance for extracting form data from the UI  
         //
         final FromUIBuilder<Container, Map> mapFromUiBuilder = new MapFromUIBuilder();
@@ -126,6 +118,10 @@
     }
 ```
 
+### Here is the Form we built
+
+![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/blob/master/src/test/resources/META-INF/form_built_from_map_entries.png)        
+
 ## Let's now understand what was happening
 
 For our examples we use a Person model. Each person may have one parent or many children.
@@ -181,10 +177,6 @@ We display the Form
 
         JOptionPane.showMessageDialog(null, scrolls, "Please Edit Me", JOptionPane.PLAIN_MESSAGE);
 ```
-
-### Here is the Form we built
-
-![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/blob/master/src/test/resources/META-INF/form_built_from_map_entries.png)        
 
 ### Now its time to extract data from the Form
 

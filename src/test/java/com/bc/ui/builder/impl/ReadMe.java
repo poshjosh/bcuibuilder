@@ -71,8 +71,8 @@ public class ReadMe {
 
         JOptionPane.showMessageDialog(null, scrolls, "Please Edit Me", JOptionPane.PLAIN_MESSAGE);
         
-//        ![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/src/test/resources/META-INF/form_built_from_map_entries.png)        
-
+        // At this point the user edits form values. Then we need to extract the updated values
+        
         final int count = ui.getComponentCount();
         for(int i=0; i<count; i++) {
             final Component c = ui.getComponent(i);
@@ -94,8 +94,10 @@ public class ReadMe {
 
         System.out.println("Printing target data: " + targetData);
         System.out.println(new com.bc.util.JsonFormat(true, true, "  ").toJSONString(targetData));
-    }
 
+// Here is the form we built        
+//![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/blob/master/src/test/resources/META-INF/form_built_from_map_entries.png)        
+    }
     
     public Person createPerson(Person parent, String firstname, String surname) {
         final Person person = new Person();
