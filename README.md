@@ -184,7 +184,7 @@ We display the Form
 
 ### Here is the Form we built
 
-    ![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/src/test/resources/META-INF/form_built_from_map_entries.png)        
+![Form UI built from map entries](https://github.com/poshjosh/bcuibuilder/blob/master/src/test/resources/META-INF/form_built_from_map_entries.png)        
 
 ### Now its time to extract data from the Form
 
