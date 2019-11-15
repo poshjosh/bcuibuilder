@@ -1,6 +1,6 @@
 logs/
 target/
-META-INF/
+# META-INF/
 
 *.properties
 *.sql

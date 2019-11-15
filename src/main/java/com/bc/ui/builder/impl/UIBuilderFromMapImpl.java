@@ -27,11 +27,11 @@ import java.util.logging.Logger;
 /**
  * @author Chinomso Bassey Ikwuagwu on Mar 22, 2017 5:15:16 PM
  */
-public class UIBuilderFromEntityMap extends UIBuilderImpl<Map> implements UIBuilderFromMap {
+public class UIBuilderFromMapImpl extends UIBuilderImpl<Map> implements UIBuilderFromMap {
 
-    private static final Logger LOG = Logger.getLogger(UIBuilderFromEntityMap.class.getName());
+    private static final Logger LOG = Logger.getLogger(UIBuilderFromMapImpl.class.getName());
         
-    public UIBuilderFromEntityMap() {
+    public UIBuilderFromMapImpl() {
         super((type, map) -> map);
     }
 

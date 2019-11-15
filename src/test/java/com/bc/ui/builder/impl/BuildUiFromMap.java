@@ -40,7 +40,7 @@ public class BuildUiFromMap implements Function<Map, Container>{
         
         final BiConsumer<Container, Collection<Component>> composer = new SimpleUIComposer(); 
         
-        final Container ui = new UIBuilderFromEntityMap()
+        final Container ui = new UIBuilderFromMapImpl()
 //                .componentModel(model)
                 .composer(composer)
                 .typeProvider(typeProvider)

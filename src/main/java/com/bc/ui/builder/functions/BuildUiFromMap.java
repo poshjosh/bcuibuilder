@@ -20,7 +20,7 @@ import com.bc.typeprovider.MemberTypeProvider;
 import com.bc.typeprovider.TypeProviders;
 import com.bc.selection.SelectionContext;
 import com.bc.selection.SelectionValues;
-import com.bc.ui.builder.impl.UIBuilderFromEntityMap;
+import com.bc.ui.builder.impl.UIBuilderFromMapImpl;
 import com.bc.ui.builder.model.ComponentModel;
 import com.bc.ui.builder.model.impl.ComponentModelImpl;
 import com.bc.ui.functions.ComputeMaxSizeFromValues;
@@ -80,7 +80,7 @@ public class BuildUiFromMap implements BiFunction<Map, Font, Container>, Seriali
             composeUiEntries(container, children, font);
         }; 
         
-        final Container ui = new UIBuilderFromEntityMap()
+        final Container ui = new UIBuilderFromMapImpl()
                 .composer(entryComposer)
                 .componentModel(componentModel)
                 .typeProvider(typeProvider)
